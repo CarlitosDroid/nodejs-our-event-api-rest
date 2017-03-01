@@ -17,6 +17,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use('/employee', employee);
 app.use('/', index);
-app.use('/placelocation', placelocation);
+app.use('/placelocation ', placelocation);
 
 app.listen(8123);
