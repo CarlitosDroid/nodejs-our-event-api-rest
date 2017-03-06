@@ -20,7 +20,7 @@ DataBaseHandler.prototype.createConnection = function () {
 
     this.connection.connect(function (err) {
         if (err) {
-            console.error("error connecting " + err.stack);
+            console.error("error connecting.. " + err.stack);
             return null;
         }
         console.log("connected as id " + this.threadId);
