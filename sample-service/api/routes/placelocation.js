@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var DataBaseHandler = require("./DataBaseHandler");
+var DataBaseHandler = require("../config/DataBaseHandler");
 var dataBaseHandler = new DataBaseHandler();
 
 var connection = dataBaseHandler.createConnection();
