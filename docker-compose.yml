@@ -1,0 +1,27 @@
+version: '2'
+services:
+  security:
+    build: ./sample-service
+    ports:
+     - "8123:8123"
+    depends_on:
+     - db
+    environment:
+     - DATABASE_HOST=db
+    volumes:
+     - ./sample-service/api:/app/api
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: CHIRINOS
+      MYSQL_USER: users_service
+      MYSQL_PASSWORD: 123
+    ports:
+      - "3306:3306"
+
+
+
+
+
+
